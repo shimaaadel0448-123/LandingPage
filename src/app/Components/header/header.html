@@ -1,25 +1,35 @@
-<div class="flex flex-col md:flex-row items-center justify-between gap-4 p-5  z-40">
+<div class="container py-3 d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
 
-  <div class="order-1 md:order-3">
-    <img src="./logo.jpg" alt="" class="w-14 h-14 object-contain mx-auto md:mx-0">
+  <div class="order-1 order-md-3 text-center text-md-start">
+    <img src="./logo.jpg" alt="" class="img-fluid" style="width: 56px; height: 56px; object-fit: contain;">
   </div>
-
-  <h1 class="hidden lg:block text-lg sm:text-xl md:text-2xl font-medium text-center flex-1 order-2 md:order-2">
+  <h1 class="d-none d-lg-block text-center flex-grow-1 order-2 fs-4 fw-semibold m-0">
     ما هى منصة اطبع فى الاردن ؟
   </h1>
+  <div class="d-none d-md-block position-relative order-3 order-md-1 ms-md-4" style="max-width: 330px; width: 100%;">
 
-  <div class="hidden md:block relative w-full max-w-sm order-3 md:order-1 md:ms-4">
+    <span class="search-icon position-absolute">
+
+    </span>
+
     <input
       type="text"
-      placeholder="بحث عن المنتجات او الشركات"
-      class="w-full rounded-3xl border border-gray-300 bg-white py-2 pl-10 pr-4 text-sm
-             focus:border-blue-500 focus:ring-2 focus:ring-blue-400 focus:outline-none" />
-
-    <svg class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500"
-      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.6 3.6a7.5 7.5 0 0013.05 13.05z" />
-    </svg>
+      class="form-control rounded-pill search-input"
+      placeholder="بحث عن المنتجات او الشركات">
   </div>
 
 </div>
+
+<style>
+  .search-icon {
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .search-input {
+    padding-left: 2.6rem !important;
+    height: 42px;
+  }
+</style>
